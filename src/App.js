@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom' //리액트 라우터에서 각 컴포넌트 불러옴
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Home from './pages/Home'
 import Today from './pages/Today'
