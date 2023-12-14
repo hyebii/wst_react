@@ -70,13 +70,22 @@ body{
 			> li{
 				display: inline-block;
 				margin: 3px 1px;
-				padding: 5px 15px;
 				border: 1px solid $black-3d;
 				border-radius: 40px;
 				> a{
+					display: block;
+					padding: 5px 15px;
+					border-radius: 40px;
 					@include font(14px, $white);
+					&:hover{
+						background: $white-disabled;
+					}
 				}
-
+				&.active{
+					a{
+						background: $black-3d;
+					}
+				}
 			}
 		}
 	}
