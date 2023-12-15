@@ -3,7 +3,7 @@ import Main from '../components/section/Main'
 
 const Youtube = () => {
 	return (
-		<Main>
+		<Main title="Youtube클론사이트" description="유튜브페이지입니다.">
 			Youtube
 		</Main>
 	)

@@ -5,38 +5,38 @@ import Main from "./components/section/Main";
 
 // import Home from "./pages/Home"; 이거를 비동기 방식으로 아래처럼 전부 바꿈
 //lazy 리액트 방식에 추가해줘야함 위에 import
-const Home = lazy(() => import('./pages/Home'));
-const Today = lazy(() => import('./pages/Today'));
-const Developer = lazy(() => import('./pages/Developer'));
-const Webd = lazy(() => import('./pages/Webd'));
-const Website = lazy(() => import('./pages/Website'));
-const Gsap = lazy(() => import('./pages/Gsap'));
-const Port = lazy(() => import('./pages/Port'));
-const Youtube = lazy(() => import('./pages/Youtube'));
-const Channel = lazy(() => import('./pages/Channel'));
-const Video = lazy(() => import('./pages/Video'));
-const Search = lazy(() => import('./pages/Search'));
-const Not = lazy(() => import('./pages/Not'));
+const Home = lazy(() => import("./pages/Home"));
+const Today = lazy(() => import("./pages/Today"));
+const Developer = lazy(() => import("./pages/Developer"));
+const Webd = lazy(() => import("./pages/Webd"));
+const Website = lazy(() => import("./pages/Website"));
+const Gsap = lazy(() => import("./pages/Gsap"));
+const Port = lazy(() => import("./pages/Port"));
+const Youtube = lazy(() => import("./pages/Youtube"));
+const Channel = lazy(() => import("./pages/Channel"));
+const Video = lazy(() => import("./pages/Video"));
+const Search = lazy(() => import("./pages/Search"));
+const Not = lazy(() => import("./pages/Not"));
 
 const App = () => {
   return (
     /* 가상의 주소 만들어줌  */
     <BrowserRouter>
-      <Suspense fallback={<Main />}>
+      <Suspense fallback={<Main />}> {/* 로딩중에 Main컴포넌트 표시 */}
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/today" element={<Today />} />
-          <Route path="/developer" element={<Developer />} />
-          <Route path="/webd" element={<Webd />} />
-          <Route path="/website" element={<Website />} />
-          <Route path="/gsap" element={<Gsap />} />
-          <Route path="/port" element={<Port />} />
-          <Route path="/youtube" element={<Youtube />} />
-          <Route path="/channel/:channelId" element={<Channel />} />
-          <Route path="/video/:videoId" element={<Video />} />
-          <Route path="/search/:searchId" element={<Search />} />
-          <Route path="*" element={<Not />} />
-          <Route pate="/*" />
+            <Route path="/" element={<Home />} />
+            <Route path="/today" element={<Today />} />
+            <Route path="/developer" element={<Developer />} />
+            <Route path="/webd" element={<Webd />} />
+            <Route path="/website" element={<Website />} />
+            <Route path="/gsap" element={<Gsap />} />
+            <Route path="/port" element={<Port />} />
+            <Route path="/youtube" element={<Youtube />} />
+            <Route path="/channel/:channelId" element={<Channel />} />
+            <Route path="/video/:videoId" element={<Video />} />
+            <Route path="/search/:searchId" element={<Search />} />
+            <Route path="*" element={<Not />} />
+            <Route pate="/*" />
         </Routes>
       </Suspense>
     </BrowserRouter>
