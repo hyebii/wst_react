@@ -8,14 +8,15 @@ body{
 }
 
 #header {
-	z-index: 99;
+	z-index: 9999;
 	position: fixed;
 	left: 0;
 	top: 0;
 	width: 260px;
 	height: 100%;
 	overflow-y: auto;
-	background: $black;
+	border-right: 1px solid $black-16;
+	// background: $;
 }
 .header{
 	&-logo{
@@ -117,12 +118,14 @@ body{
 	height: 100%;
 	margin: 0 auto;
 	padding-left: 260px;
-	background-color: #222;
 }
 #footer {
+	width: calc(100% - 260px);
+	margin-left: 260px;
+	padding: 20px;
+	background-color: $black-16;
 	text-align: center;
-	background-color: #333;
-	padding: 20px 20px 20px 260px;
+	@include font(0.8rem, $white-015);
 } 
 
 //header-logo 애니메이션
