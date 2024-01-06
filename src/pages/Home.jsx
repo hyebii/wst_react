@@ -16,7 +16,7 @@ const Home = () => {
 			title="Home웹스토리보이" 
 			description="Home웹스토리보이에 오신것을 환영합니다."
 		>
-			{/* 메인페이지 컴포넌트 - 메인에 있는 영역들 */}
+			{/* Home이라는 페이지(메인페이지) 컴포넌트 - 메인에 있는 영역들 */}
 			<Today />
 			<Developer />
 			<Webd />

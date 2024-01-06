@@ -14,6 +14,13 @@ $font-size-base: 16px;
 	white-space: nowrap;
 	word-wrap: normal;
 }
+@mixin ellipsis_me($width: 100%) {
+	overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 
 //  ------------------------------------------------------------
 // Example
