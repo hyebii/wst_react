@@ -1,11 +1,11 @@
-import todayView01 from "../assets/images/today/todayView01.jpg";
-import todayView02 from "../assets/images/today/todayView02.jpg";
-import todayView03 from "../assets/images/today/todayView01.jpg";
-import todayView04 from "../assets/images/today/todayView02.jpg";
-import todayView05 from "../assets/images/today/todayView01.jpg";
-import todayView06 from "../assets/images/today/todayView02.jpg";
-import todayView07 from "../assets/images/today/todayView01.jpg";
-import todayView08 from "../assets/images/today/todayView02.jpg";
+import todayView01 from "../assets/images/todayView01.jpg";
+import todayView02 from "../assets/images/todayView02.jpg";
+import todayView03 from "../assets/images/todayView01.jpg";
+import todayView04 from "../assets/images/todayView02.jpg";
+import todayView05 from "../assets/images/todayView01.jpg";
+import todayView06 from "../assets/images/todayView02.jpg";
+import todayView07 from "../assets/images/todayView01.jpg";
+import todayView08 from "../assets/images/todayView02.jpg";
 
 export const todayText = [
     {
