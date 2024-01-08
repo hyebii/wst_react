@@ -1,0 +1,12 @@
+import React from 'react'
+import Main from '../components/section/Main'
+
+const Youtube = () => {
+	return (
+		<Main title="Youtube클론사이트" description="유튜브페이지입니다.">
+			Youtube
+		</Main>
+	)
+}
+
+export default Youtube
