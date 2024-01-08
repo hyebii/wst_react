@@ -6,7 +6,7 @@ const Today = () => {
 	return (
 		<section className='today'>
 			<div className="today-inner">
-				<div className='thumb'>
+				<div className='thumb play-icon'>
 					<Link to={todayText[0].page}>
 						<img src={todayText[0].img} alt={todayText[0].title}></img>
 					</Link>

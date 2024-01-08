@@ -10,16 +10,15 @@ body {
 //섹션공통
 section {
   padding: 40px;
-  h2{
+  h2 {
     @include font(1.25rem);
     margin-bottom: 1rem;
   }
 
-  @media (max-width: 800){
+  @media (max-width: 800px) {
     padding: 20px;
   }
 }
-
 
 #header {
   z-index: 9999;
@@ -30,13 +29,14 @@ section {
   height: 100%;
   overflow-y: auto;
   border-right: 1px solid $black-16;
-  // background: $;
+  background: $black;
+  @media screen and (max-width: 800px){
+    left: -260px;
+  }
 }
-
 .header {
   &-logo {
     border-bottom: 1px solid $black-16;
-
     a {
       display: flex;
       margin: 10px;
@@ -50,7 +50,6 @@ section {
         background: $primary-disabled;
         animation: ani 20s 20s ease-in-out infinite;
       }
-
       span {
         @include font(20px, $white);
         font-weight: 900;
@@ -59,29 +58,25 @@ section {
       }
     }
   }
-
   &-menu {
     padding: 10px;
-
     .menu {
       border-bottom: 1px solid $black-16;
-
-      >li {
+      > li {
         margin-bottom: 5px;
-
-        >a {
+        > a {
           display: block;
           margin: 10px;
           padding: 15px 15px;
           transition: all 0.3s;
-          @include font(calcRem(16px), $white-disabled);
+          opacity: 0.7;
+          @include font(calcRem(16px), $white);
 
           &:hover {
             background-color: $black-16;
-            color: $white;
+            opacity: 1;
           }
         }
-
         &.active {
           a {
             background-color: $black-16;
@@ -90,17 +85,16 @@ section {
         }
       }
     }
-
     .keyword {
       padding: 10px;
 
-      >li {
+      > li {
         display: inline-block;
         margin: 3px 1px;
         border: 1px solid $black-3d;
         border-radius: 40px;
 
-        >a {
+        > a {
           display: block;
           padding: 5px 15px;
           border-radius: 40px;
@@ -119,7 +113,6 @@ section {
       }
     }
   }
-
   &-sns {
     backdrop-filter: blur(10px);
     position: absolute;
@@ -127,12 +120,12 @@ section {
     left: 50%;
     transform: translateX(-50%);
 
-    >ul {
+    > ul {
       display: flex;
       gap: 25px;
 
-      >li {
-        >a {
+      > li {
+        > a {
           display: block;
 
           svg {
@@ -144,6 +137,17 @@ section {
       }
     }
   }
+  @media screen and (max-width: 800px){
+    &-logo{
+      border-bottom: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    &-sns{
+      display: none;
+    }
+  }
 }
 
 #main {
@@ -152,6 +156,9 @@ section {
   height: 100%;
   margin: 0 auto;
   padding-left: 260px;
+  @media screen and (max-width: 800px){
+    padding-left: 0;
+  }
 }
 
 #footer {
@@ -161,8 +168,13 @@ section {
   background-color: $black-16;
   text-align: center;
   @include font(0.8rem, $white-015);
+  @media screen and (max-width: 800px){
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
+//today 컨텐츠
 .today {
   &-inner {
     display: flex;
@@ -174,7 +186,6 @@ section {
     .txt {
       width: 60%;
       padding: 2rem;
-  
       .chip {
         display: inline-block;
         margin-bottom: 10px;
@@ -182,18 +193,15 @@ section {
         border-radius: 20px;
         background: $primary-disabled;
       }
-  
       .tit {
         @include font(2rem);
       }
-  
       .desc {
         margin: 1rem 0;
         color: $white;
         opacity: 0.8;
-        @include ellipsis_me;
+        @include ellipsis_4;
       }
-  
       .info {
         .author {
           margin-right: 10px;
@@ -203,7 +211,6 @@ section {
           text-underline-position: under;
           text-transform: uppercase;
         }
-  
         .date {
           @include font(0.8rem, $white);
           opacity: 0.8;
@@ -211,8 +218,44 @@ section {
       }
     }
   }
+  @media screen and (max-width: 1700px) {
+    &-inner {
+      .thumb {
+        width: 500px;
+      }
+      .txt {
+        width: calc(100% - 500px);
+        .desc {
+          @include ellipsis_2;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    &-inner {
+      flex-direction: column;
+      .thumb {
+        width: 100%;
+      }
+      .txt {
+        width: 100%;
+        .tit {
+          font-size: 24px;
+          margin-bottom: 1rem;
+        }
+        .desc {
+          display: none;
+        }
+      }
+    }
+  }
 }
-
+@media screen and (max-width: 800px) {
+  #todayPage,
+  .today {
+    margin-top: 80px;
+  }
+}
 
 //header-logo 애니메이션
 @keyframes ani {
@@ -233,15 +276,15 @@ section {
 }
 
 //마우스 오버 아이콘
-.play-icon{
-  a{
+.play-icon {
+  a {
     position: relative;
     display: block;
     width: 100%;
     cursor: pointer;
     //어두운화면
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -252,8 +295,8 @@ section {
       transition: 0.3s;
     }
     //재생버튼
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       position: absolute;
       left: 50%;
       top: 50%;
@@ -264,50 +307,25 @@ section {
       border-radius: 50%;
       opacity: 0;
     }
-    &:hover::before{
+    &:hover::before {
       opacity: 0;
-      
     }
-    &:hover::after{
+    &:hover::after {
       opacity: 1;
       transition: opacity 0.3s;
     }
   }
 }
 
-
-
-
 //me임시
-@media screen and (max-width: 1000px){
-  header{
-    width: 150px !important;
-  }
-  main{
-    padding-left: 150px !important;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// @media screen and (max-width: 1000px){
+//   header{
+//     width: 150px !important;
+//   }
+//   main{
+//     padding-left: 150px !important;
+//   }
+// }
 
 // login
 // 메인 페이지
