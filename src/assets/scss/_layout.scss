@@ -272,38 +272,17 @@ section {
       overflow: hidden;
     }
     .profile{
-      margin-right: 20px;
       .img{
-        width: 150px;
-        height: 150px;
         overflow: hidden;
         border-radius: 50%;
       }
       .info{
-        width: 150px;
+        width: 100%;
         text-align: center;
-        padding: 10px 0 40px;
+        margin-top: 10px;
         @include ellipsis;
         white-space: nowrap;
       }
-    }
-  }
-  @media screen and (max-width: 1200px){
-    &-inner{
-      justify-content: center;
-      .profile{
-        margin-right: 0;
-        .img{
-          width: 130px;
-          height: 130px;
-          margin: 10px auto;
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 800px){
-    &-inner{
-      margin-top: 70px;
     }
   }
 }
@@ -338,6 +317,46 @@ section {
 //     }
 //   }
 // }
+
+
+//페이지
+.developerPage{
+  .developer{
+    &-inner{
+      margin-right: 20px;
+      .profile{
+        margin-right: 20px;
+        .img{
+          width: 150px;
+          height: 150px;
+        }
+        .info{
+          width: 150px;
+          padding-bottom: 40px;
+        }
+      }
+    }
+    @media screen and (max-width: 1200px){
+      &-inner{
+        justify-content: center;
+        .profile{
+          margin-right: 0;
+          .img{
+            width: 130px;
+            height: 130px;
+            margin: 10px auto;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 800px){
+      &-inner{
+        margin-top: 70px;
+      }
+    }
+  }
+}
+
 
 //header-logo 애니메이션
 @keyframes ani {
