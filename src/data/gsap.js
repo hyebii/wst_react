@@ -71,40 +71,5 @@ export const gsapText = [
 			videoId: "Z2NeyjasCdY",
 			date: "2023.09.09",
 			channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
-	},{
-			title: "11. GSAP Parallax Effect : 메뉴 숨기기 효과 (feat. scrollTrigger) | 웹스토리보이 | 메뉴 바꾸기",
-			img: gsap01,
-			author: "webstoryboy",
-			videoId: "zMBXXAl7MaY",
-			date: "2023.09.09",
-			channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
-	},{
-			title: "12. GSAP Parallax Effect : 가로 효과 (feat. scrollTrigger) | 웹스토리보이 | 가로 사이트",
-			img: gsap01,
-			author: "webstoryboy",
-			videoId: "DCtCgE08E8I",
-			date: "2023.09.09",
-			channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
-	},{
-			title: "13. GSAP Parallax Effect : 가로/세로 효과 (feat. scrollTrigger) | 웹스토리보이 | 가로세로 사이트",
-			img: gsap01,
-			author: "webstoryboy",
-			videoId: "YPzwvzFfCfU",
-			date: "2023.09.09",
-			channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
-	},{
-			title: "14. GSAP Parallax Effect : 가로/세로 나타나기 효과 (feat. scrollTrigger) | 웹스토리보이 | 포폴사이트",
-			img: gsap01,
-			author: "webstoryboy",
-			videoId: "puCe3ollwTg",
-			date: "2023.09.09",
-			channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
-	},{
-			title: "15. GSAP Parallax Effect : 스무스 효과 (feat. scrollTrigger) | 웹스토리보이 | 포폴은 스무스지",
-			img: gsap01,
-			author: "webstoryboy",
-			videoId: "tMsFs6GoXmg",
-			date: "2023.09.09",
-			channelId: "UCsvQSv7EeCMHyYb9ENKAJZw",
 	}
 ]

@@ -308,33 +308,36 @@ section {
   }
 }
 
-.webd,
-.website,
-.gsap,
-.port,
-.youtube{
-  .video-inner{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: space-between;
-    gap: 20px;
-    .video{
-      .thumb{}
-    }
-
-    // @media (max-width: 1400px){
-    //   grid-template-columns: repeat(3, 32%);
-    //   gap: 15px;
-    // }
-    // @media (max-width: 1200px){
-    //     grid-template-columns: repeat(2, 49%);
-    //     gap: 10px;
-    // }
-    // @media (max-width: 400px){
-    //     grid-template-columns: repeat(1, 100%);
-    // }
-  }
-}
+// .webd,
+// .website,
+// .gsap,
+// .port,
+// .youtube{
+//   .video-inner{
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//     justify-content: space-between;
+//     gap: 20px;
+//   }
+  
+//   @media (max-width: 1400px){
+//     &-inner{
+//       grid-template-columns: repeat(3, 32%);
+//       gap: 15px;
+//     }
+//   }
+//   @media (max-width: 1200px){
+//     &-inner{
+//       grid-template-columns: repeat(2, 49%);
+//       gap: 10px;
+//     }
+//   }
+//   @media (max-width: 400px){
+//     &-inner{
+//       grid-template-columns: repeat(1, 100%);
+//     }
+//   }
+// }
 
 //header-logo 애니메이션
 @keyframes ani {
