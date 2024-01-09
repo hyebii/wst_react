@@ -179,7 +179,9 @@ section {
   }
 }
 
-//컨텐츠
+/*******************************************************************
+	contents
+********************************************************************/
 .today {
   &-inner {
     display: flex;
@@ -318,8 +320,9 @@ section {
 //   }
 // }
 
-
-//페이지
+/*******************************************************************
+	page
+********************************************************************/
 .developerPage{
   .developer{
     &-inner{
@@ -353,6 +356,36 @@ section {
       &-inner{
         margin-top: 70px;
       }
+    }
+  }
+}
+
+//me
+#videoPage{
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 800px){
+    margin-top: 80px;
+  }
+}
+.video{
+  &-wrapper{
+    padding: 0 40px;
+    &> h2{
+      padding-top:20px;
+    }
+    .react-player{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  @media (max-width: 800px){
+    &-wrapper{
+      padding: 0;
     }
   }
 }
